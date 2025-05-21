@@ -1,5 +1,13 @@
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SVPresentation.Formularios;
+using SVRepository;
+using SVRepository.Implementation;
+using SVRepository.Interfaces;
+using SVServices;
+using SVServices.Implementation;
+using SVServices.Interfaces;
 
 namespace SVPresentation
 {
@@ -15,12 +23,30 @@ namespace SVPresentation
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             var Host = CreateHostbuilder().Build();
-            Application.Run(new Form1());
+            var formService = Host.Services.GetRequiredService<frmCategoria>();
+
+
+            Application.Run(formService);
         }
 
         static IHostBuilder CreateHostbuilder() => Host.CreateDefaultBuilder()//Configuracion Host para app settings json
-            .ConfigureAppConfiguration((context, config) => {                //- context: Proporciona información sobre el host actual.- config: Permite modificar la configuración.
+            .ConfigureAppConfiguration((context, config) => {                //- context: Proporciona información sobre el host actual.
+                                                                             //- config: Permite modificar la configuración.
                 config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            })
+            .ConfigureServices((context, services) =>/*Configurar services y la capa de repositorio de service*/
+            {
+
+
+
+                services.RegisterRepositoryDependecies();
+                services.RegisterServicesDependecies();//Usar repositorio primero para dar vida y que medida use primero el
+                                                       //repositorio y luego usar el servicio para luego la capa de presentacion
+
+                services.AddTransient<frmCategoria>();
+                
             });
     }
 }
+
+//((context,services)) para hacer referencia

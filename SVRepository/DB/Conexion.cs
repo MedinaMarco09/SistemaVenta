@@ -12,9 +12,9 @@ namespace SVRepository.DB
         {
             _configuracion = configuracion;
             _cadenaSql = _configuracion.GetConnectionString("CadenaSql")!; //nodo, !no es valor null
-        }
+        }   
 
-        public SqlConnection Obtener()
+        public SqlConnection ObtenerSQLConexion()
         {
             return new SqlConnection(_cadenaSql);
         }
