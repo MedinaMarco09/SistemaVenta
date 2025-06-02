@@ -23,7 +23,7 @@ namespace SVPresentation
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             var Host = CreateHostbuilder().Build();
-            var formService = Host.Services.GetRequiredService<frmCategoria>();
+            var formService = Host.Services.GetRequiredService<frmNegocio>();
 
 
             Application.Run(formService);
@@ -44,7 +44,10 @@ namespace SVPresentation
                                                        //repositorio y luego usar el servicio para luego la capa de presentacion
 
                 services.AddTransient<frmCategoria>();
+                services.AddTransient<frmProducto>();
+                services.AddTransient<frmNegocio>();
                 
+
             });
     }
 }

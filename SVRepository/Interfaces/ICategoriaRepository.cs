@@ -5,8 +5,8 @@ namespace SVRepository.Interfaces
 {
     public interface ICategoriaRepository
     {
-        Task<List<Categoria>> Lista(String busca = "");
-        Task<string> Crear(Categoria Objeto);
-        Task<string> Editar(Categoria Objeto);
+        Task<List<Categoria>> Lista(String buscar = "");
+        Task<string> Crear(Categoria objeto);
+        Task<string> Editar(Categoria objeto);
     }
 }

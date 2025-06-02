@@ -13,6 +13,8 @@ namespace SVRepository
             services.AddSingleton<Conexion>();
             services.AddTransient<IMedidaRepository, MedidaRepository>();
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+            services.AddTransient<IProductoRepository, ProductoRepository>();
+            services.AddTransient<INegocioRepository, NegocioRepository>();
         }
     }
 }
