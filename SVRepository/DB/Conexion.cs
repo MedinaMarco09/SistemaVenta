@@ -20,3 +20,22 @@ namespace SVRepository.DB
         }
     }
 }
+
+//private readonly Conexion _conexion;
+
+//public Repository(Conexion conexion)
+//{
+//    _conexion = conexion;
+
+//}
+
+// **************************************************************************
+// *                   Repository y Service                                 *
+// **************************************************************************
+
+//private readonly I"Entidad"Repository _"entidad"Repository; //Inyeccion de instancias
+
+//public "Entidad"Service(I"Entidad"Repository "entidad"Repository) //constructor
+//{
+//    _"entidad"Repository = "entidad"Repository;
+//}

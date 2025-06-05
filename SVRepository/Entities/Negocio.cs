@@ -6,7 +6,7 @@ namespace SVRepository.Entities
     {
         public int IdNegocio { get; set; }
         public string RazonSocial { get; set; }
-        public string RUC { get; set; }
+        public string RFC { get; set; }
         public string Direccion { get; set; }
         public string Celular { get; set; }
         public string Correo { get; set; }

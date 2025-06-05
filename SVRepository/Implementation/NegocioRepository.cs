@@ -32,7 +32,7 @@ namespace SVRepository.Implementation
                         objeto = new Negocio()
                         {
                             RazonSocial = dr["RazonSocial"].ToString(),
-                            RUC = dr["RUC"].ToString(),
+                            RFC = dr["RFC"].ToString(),
                             Direccion = dr["Direccion"].ToString(),
                             Celular = dr["Celular"].ToString(),
                             Correo = dr["Correo"].ToString(),
@@ -57,7 +57,7 @@ namespace SVRepository.Implementation
                 con.Open();
                 var cmd = new SqlCommand("sp_editarNegocio", con);
                 cmd.Parameters.AddWithValue("@RazonSocial", objeto.RazonSocial);
-                cmd.Parameters.AddWithValue("@RUC", objeto.RUC);
+                cmd.Parameters.AddWithValue("@RFC", objeto.RFC);
                 cmd.Parameters.AddWithValue("@Direccion", objeto.Direccion);
                 cmd.Parameters.AddWithValue("@Celular", objeto.Celular);
                 cmd.Parameters.AddWithValue("@Correo", objeto.Correo);

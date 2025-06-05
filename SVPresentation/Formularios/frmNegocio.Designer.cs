@@ -32,7 +32,7 @@
             label2 = new Label();
             txbRazonSocial = new TextBox();
             label3 = new Label();
-            txbRUC = new TextBox();
+            txbRFC = new TextBox();
             label4 = new Label();
             txbDireccion = new TextBox();
             label5 = new Label();
@@ -88,13 +88,13 @@
             label3.TabIndex = 2;
             label3.Text = "Razón Social:";
             // 
-            // txbRUC
+            // txbRFC
             // 
-            txbRUC.Location = new Point(36, 222);
-            txbRUC.Margin = new Padding(4, 5, 4, 5);
-            txbRUC.Name = "txbRUC";
-            txbRUC.Size = new Size(483, 31);
-            txbRUC.TabIndex = 5;
+            txbRFC.Location = new Point(36, 222);
+            txbRFC.Margin = new Padding(4, 5, 4, 5);
+            txbRFC.Name = "txbRFC";
+            txbRFC.Size = new Size(483, 31);
+            txbRFC.TabIndex = 5;
             // 
             // label4
             // 
@@ -259,7 +259,7 @@
             Controls.Add(label6);
             Controls.Add(txbDireccion);
             Controls.Add(label5);
-            Controls.Add(txbRUC);
+            Controls.Add(txbRFC);
             Controls.Add(label4);
             Controls.Add(txbRazonSocial);
             Controls.Add(label3);
@@ -282,7 +282,7 @@
         private Label label2;
         private TextBox txbRazonSocial;
         private Label label3;
-        private TextBox txbRUC;
+        private TextBox txbRFC;
         private Label label4;
         private TextBox txbDireccion;
         private Label label5;
